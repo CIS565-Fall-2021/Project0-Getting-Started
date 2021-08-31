@@ -26,8 +26,8 @@ void checkCUDAError(const char* msg) {
 // Kernel that writes the image to the OpenGL PBO directly.
 __global__ void createVersionVisualization(uchar4* PBOpos, int width,
                                            int height, int major, int minor) {
-  int x = (blockIdx.x * blockDim.x) + threadIdx.x;
-  int y = (blockIdx.y * blockDim.y) + threadIdx.y;
+  int x     = (blockIdx.x * blockDim.x) + threadIdx.x;
+  int y     = (blockIdx.y * blockDim.y) + threadIdx.y;
   int index = x + (y * width);
 
   if (x <= width && y <= height) {

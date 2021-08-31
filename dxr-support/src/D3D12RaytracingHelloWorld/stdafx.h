@@ -16,31 +16,30 @@
 #pragma once
 
 #ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers.
+#define WIN32_LEAN_AND_MEAN  // Exclude rarely-used stuff from Windows headers.
 #endif
 
 #include <windows.h>
 
 // C RunTime Header Files
-#include <stdlib.h>
-#include <sstream>
-#include <iomanip>
-
-#include <list>
-#include <string>
-#include <wrl.h>
+#include <assert.h>
+#include <atlbase.h>
+#include <dxgi1_6.h>
 #include <shellapi.h>
+#include <stdlib.h>
+#include <wrl.h>
+
+#include <iomanip>
+#include <list>
 #include <memory>
+#include <sstream>
+#include <string>
 #include <unordered_map>
 #include <vector>
-#include <atlbase.h>
-#include <assert.h>
 
-#include <dxgi1_6.h>
-#include "d3d12_1.h"
-#include <atlbase.h>
 #include "D3D12RaytracingFallback.h"
 #include "D3D12RaytracingHelpers.hpp"
+#include "d3d12_1.h"
 #include "d3dx12.h"
 
 #ifdef _DEBUG
@@ -49,4 +48,3 @@
 
 #include "DXSampleHelper.h"
 #include "DeviceResources.h"
-

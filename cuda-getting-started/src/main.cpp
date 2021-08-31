@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[]) {
   // TODO: Change this line to use your name!
-  m_yourName = "TODO: YOUR NAME HERE";
+  m_yourName = "Zhihao Ruan";
 
   if (init(argc, argv)) {
     mainLoop();
@@ -27,7 +27,7 @@ bool init(int argc, char **argv) {
   // Set window title to "Student Name: [SM 2.0] GPU Name"
   std::string deviceName;
   cudaDeviceProp deviceProp;
-  int gpuDevice = 0;
+  int gpuDevice    = 0;
   int device_count = 0;
   cudaGetDeviceCount(&device_count);
   if (gpuDevice > device_count) {
@@ -51,7 +51,7 @@ bool init(int argc, char **argv) {
   if (!glfwInit()) {
     return false;
   }
-  m_width = 800;
+  m_width  = 800;
   m_height = 800;
   m_window =
       glfwCreateWindow(m_width, m_height, deviceName.c_str(), NULL, NULL);
@@ -84,8 +84,8 @@ bool init(int argc, char **argv) {
 void initPBO(GLuint *pbo) {
   if (pbo) {
     // set up vertex data parameter
-    int num_texels = m_width * m_height;
-    int num_values = num_texels * 4;
+    int num_texels       = m_width * m_height;
+    int num_values       = num_texels * 4;
     size_t size_tex_data = sizeof(GLubyte) * num_values;
 
     // Generate a buffer ID called a PBO (Pixel Buffer Object)
