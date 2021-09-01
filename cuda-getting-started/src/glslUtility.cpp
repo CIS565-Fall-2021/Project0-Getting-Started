@@ -49,8 +49,8 @@ char *loadFile(const char *fname, GLint &fSize) {
   std::ifstream file(fname, ios::in | ios::binary | ios::ate);
   if (file.is_open()) {
     unsigned int size = (unsigned int)file.tellg();
-    fSize = size;
-    char *memblock = new char[size];
+    fSize             = size;
+    char *memblock    = new char[size];
     file.seekg(0, ios::beg);
     file.read(memblock, size);
     file.close();
@@ -66,7 +66,7 @@ char *loadFile(const char *fname, GLint &fSize) {
 // From OpenGL Shading Language 3rd Edition, p215-216
 // Display (hopefully) useful error messages if shader fails to compile
 void printShaderInfoLog(GLint shader) {
-  int infoLogLen = 0;
+  int infoLogLen   = 0;
   int charsWritten = 0;
   GLchar *infoLog;
 
@@ -82,7 +82,7 @@ void printShaderInfoLog(GLint shader) {
 }
 
 void printLinkInfoLog(GLint prog) {
-  int infoLogLen = 0;
+  int infoLogLen   = 0;
   int charsWritten = 0;
   GLchar *infoLog;
 
@@ -141,7 +141,7 @@ shaders_t loadDefaultShaders() {
   printShaderInfoLog(f);
 
   shaders_t out;
-  out.vertex = v;
+  out.vertex   = v;
   out.fragment = f;
 
   delete[] vs;  // dont forget to free allocated memory, or else really bad
@@ -189,7 +189,7 @@ shaders_t loadShaders(const char *vert_path, const char *frag_path) {
   printShaderInfoLog(f);
 
   shaders_t out;
-  out.vertex = v;
+  out.vertex   = v;
   out.fragment = f;
 
   delete[] vs;  // dont forget to free allocated memory, or else really bad
