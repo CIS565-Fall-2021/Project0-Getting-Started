@@ -64,8 +64,9 @@ bool IsInsideViewport(float2 p, Viewport viewport) {
 
     [shader("closesthit")] void MyClosestHitShader(inout RayPayload payload,
                                                    in MyAttributes attr) {
-  float3 barycentrics = float3(1 - attr.barycentrics.x - attr.barycentrics.y,
-                               attr.barycentrics.x, attr.barycentrics.y);
+  /*float3 barycentrics = float3(1 - attr.barycentrics.x - attr.barycentrics.y,
+                               attr.barycentrics.x, attr.barycentrics.y);*/
+  float3 barycentrics = float3(0, 0.5, 0);
   payload.color       = float4(barycentrics, 1);
 }
 
