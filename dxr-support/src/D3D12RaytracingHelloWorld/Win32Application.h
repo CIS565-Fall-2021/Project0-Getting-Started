@@ -15,7 +15,8 @@
 
 class DXSample;
 
-class Win32Application {
+class Win32Application
+{
 public:
     static int Run(DXSample* pSample, HINSTANCE hInstance, int nCmdShow);
     static void ToggleFullscreenWindow(IDXGISwapChain* pOutput = nullptr);

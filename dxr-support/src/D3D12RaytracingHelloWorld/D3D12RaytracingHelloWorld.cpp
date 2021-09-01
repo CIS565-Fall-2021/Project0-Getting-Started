@@ -9,10 +9,10 @@
 //
 //*********************************************************
 
-#include "D3D12RaytracingHelloWorld.h"
-#include "CompiledShaders\Raytracing.hlsl.h"
-#include "DirectXRaytracingHelper.h"
 #include "stdafx.h"
+#include "D3D12RaytracingHelloWorld.h"
+#include "DirectXRaytracingHelper.h"
+#include "CompiledShaders\Raytracing.hlsl.h"
 
 using namespace std;
 using namespace DX;
@@ -472,7 +472,7 @@ void D3D12RaytracingHelloWorld::BuildAccelerationStructures() {
   // Allocate resources for acceleration structures.
   // Acceleration structures can only be placed in resources that are created in
   // the default heap (or custom heap equivalent). Default heap is OK since the
-  // application doesnï¿½t need CPU read/write access to them. The resources that
+  // application doesn’t need CPU read/write access to them. The resources that
   // will contain acceleration structures must be created in the state
   // D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE, and must have
   // resource flag D3D12_RESOURCE_FLAG_ALLOW_UNORDERED_ACCESS. The

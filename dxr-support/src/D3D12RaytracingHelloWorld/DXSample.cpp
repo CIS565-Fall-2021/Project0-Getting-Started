@@ -9,8 +9,8 @@
 //
 //*********************************************************
 
-#include "DXSample.h"
 #include "stdafx.h"
+#include "DXSample.h"
 
 using namespace Microsoft::WRL;
 using namespace std;

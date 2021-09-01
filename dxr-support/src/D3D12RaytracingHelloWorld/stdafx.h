@@ -22,24 +22,25 @@
 #include <windows.h>
 
 // C RunTime Header Files
-#include <assert.h>
-#include <atlbase.h>
-#include <dxgi1_6.h>
-#include <shellapi.h>
 #include <stdlib.h>
-#include <wrl.h>
-
-#include <iomanip>
-#include <list>
-#include <memory>
 #include <sstream>
+#include <iomanip>
+
+#include <list>
 #include <string>
+#include <wrl.h>
+#include <shellapi.h>
+#include <memory>
 #include <unordered_map>
 #include <vector>
+#include <atlbase.h>
+#include <assert.h>
 
+#include <dxgi1_6.h>
+#include "d3d12_1.h"
+#include <atlbase.h>
 #include "D3D12RaytracingFallback.h"
 #include "D3D12RaytracingHelpers.hpp"
-#include "d3d12_1.h"
 #include "d3dx12.h"
 
 #ifdef _DEBUG

@@ -9,9 +9,9 @@
 //
 //*********************************************************
 
+#include "stdafx.h"
 #include "DeviceResources.h"
 #include "Win32Application.h"
-#include "stdafx.h"
 
 using namespace DX;
 using namespace std;

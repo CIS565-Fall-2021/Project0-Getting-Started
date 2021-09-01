@@ -12,8 +12,8 @@
 #pragma once
 
 #include "DXSample.h"
-#include "RaytracingHlslCompat.h"
 #include "StepTimer.h"
+#include "RaytracingHlslCompat.h"
 
 namespace GlobalRootSignatureParams {
 enum Value { OutputViewSlot = 0, AccelerationStructureSlot, Count };

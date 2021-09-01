@@ -12,8 +12,8 @@
 #pragma once
 
 #include "DXSampleHelper.h"
-#include "DeviceResources.h"
 #include "Win32Application.h"
+#include "DeviceResources.h"
 
 class DXSample : public DX::IDeviceNotify {
 public:
