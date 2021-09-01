@@ -74,3 +74,5 @@ void kernelVersionVis(uchar4* PBOpos, int width, int height, int major,
 
   checkCUDAError("Kernel failed!");
 }
+
+#undef __CUDACC__
