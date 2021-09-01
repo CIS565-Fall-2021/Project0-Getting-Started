@@ -3,12 +3,32 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Zhihao Ruan
+  * [LinkedIn](https://www.linkedin.com/in/zhihao-ruan-29b29a13a/), [personal website](https://zhihaoruan.xyz/), etc.
+* Tested on (personal desktop, dual boot): 
+  * Windows 10, Ryzen 7 3700X, RTX 2060 Super 8GB
+  * Ubuntu 20.04 LTS, Ryzen 7 3700X, RTX 2060 Super 8GB
 
-### (TODO: Your README)
+## Submissions
+This section contains the screenshots submitted for Project 0.
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+### Window of `cuda-getting-started` With Title
+
+<p align="center"></p>
+    <img src="images/cuda_getting_started.png" alt="" width="500">
+
+### Nsight Performance Analysis
+
+![](images/cuda_getting_started_profiling.png)
+
+### WebGL Compatibility
+
+![](images/webgl_report.png)
+
+### DXR Rendering
+
+![](images/DXR_triangle.png)
+
+## Other Contributions
+1. Added `clang-format` in each of the source folders to ensure consistent code formatting.
 
