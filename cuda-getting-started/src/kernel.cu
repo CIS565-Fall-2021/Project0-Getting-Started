@@ -7,10 +7,7 @@
  * @copyright University of Pennsylvania
  */
 
-#define __CUDACC__
-
 #include <cuda_runtime_api.h>
-#include <device_functions.h>
 #include <device_launch_parameters.h>
 #include <cstdio>
 #include "kernel.h"
@@ -74,5 +71,3 @@ void kernelVersionVis(uchar4* PBOpos, int width, int height, int major,
 
   checkCUDAError("Kernel failed!");
 }
-
-#undef __CUDACC__
