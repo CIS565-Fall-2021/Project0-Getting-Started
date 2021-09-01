@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Zhihao Ruan
   * [LinkedIn](https://www.linkedin.com/in/zhihao-ruan-29b29a13a/), [personal website](https://zhihaoruan.xyz/), etc.
-* Tested on: 
+* Tested on (personal desktop, dual boot): 
   * Windows 10, Ryzen 7 3700X, RTX 2060 Super 8GB
   * Ubuntu 20.04 LTS, Ryzen 7 3700X, RTX 2060 Super 8GB
 
