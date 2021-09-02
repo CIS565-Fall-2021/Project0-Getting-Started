@@ -8,11 +8,10 @@ Project 0 Getting Started
 * Tested on: Windows 10, i7-11800H 144Hz 16GB RAM, GeForce RTX 3060 512GB SSD (Personal Laptop)
 
 ### (TODO: Your README)
-First edit to have my name appear at the top bar of the window
-![](images/Screenshot1.png)
 
-WebGL Hardware Accelerated
-![](images/Screenshot2.png)
+![First edit to have my name appear at the top bar of the window](images/Screenshot1.png)
+
+![WebGL Hardware Accelerated](images/Screenshot2.png)
 
 
 
