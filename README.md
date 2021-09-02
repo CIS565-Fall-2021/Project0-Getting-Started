@@ -4,9 +4,21 @@ Project 0 Getting Started
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
 * Beini Gu
-  * [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+  * [LinkedIn](https://www.linkedin.com/in/rgu/), [personal website](https://www.seas.upenn.edu/~gubeini/), [twitter](https://twitter.com/scoutydren), etc.
+* Tested on: Windows 10, AMD Ryzen 7 3700X 8-Core Processor 3.59 GHz 16GB, GTX 2060
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+### CUDA test
 
+![capture](\images\capture.png)
+
+### WebGL test
+
+![webglcheck](\images\webglcheck.png)
+
+### NSight Profile
+
+![nsight_profile](\images\nsight_profile.png)
+
+### DRX test
+
+![drx](\images\drx.png)
