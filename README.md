@@ -11,12 +11,12 @@ Project 0 Getting Started
 
 Compute Capability: 7.5
 
-![](images/part-3.1.1)
+![](images/part-3.1.1.png)
 
-![](images/trace-analysis)
+![](images/trace-analysis.png)
 
-![](images/nsight-debugging)
+![](images/nsight-debugging.png)
 
-![](images/webgl-enabled)
+![](images/webgl-enabled.png)
 
-![](images/dxr-support)
+![](images/dxr-support.png)
