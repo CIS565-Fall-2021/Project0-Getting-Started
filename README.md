@@ -33,11 +33,10 @@ My Chrome browser supports both WebGL 1 and WebGL 2.
 <br>
 <img src="images/cuda_3_2_webgl_2.png" width="500">
 
+## Part 3.3: DXR
+My computer supports the software fallback layer only (FL). I made my triangle purple.
 
-### (TODO: Your README)
-
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+<img src="images/cuda_3_3_dxr_test.png" width="500">
 
 ## Other contributions
 On Optimus machines, you may get the error `Cuda error: Kernel failed!: all CUDA-capable devices are busy or unavailable.` It looks like Windows is starting to manage automatic GPU switching rather than the NVIDIA driver, so if this issue comes up, you might be able to fix it by going to the Windows Settings app > System > Display > Graphics and manually adding the path to the compiled executable that was built in VS code. Then, you can set the GPU to NVIDIA.
