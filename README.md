@@ -12,9 +12,9 @@ Project 0 Getting Started
 Compute Capability: `6.1`
 
 ### Part 3.1.1: Modify CUDA Program
-Screenshot of CUDA project executable:
+Screenshot of CUDA project executable (with updated colors as of 9/1/2021):
 
-<img src="images/cuda_3_1_1_name.png" width="500">
+<img src="images/cuda_3_1_1_name2.png" width="500">
 
 ### Part 3.1.2: Analyze Program
 Application trace timeline:
