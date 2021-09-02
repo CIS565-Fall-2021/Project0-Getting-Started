@@ -13,7 +13,7 @@ Project 0 Getting Started
 
 Part 3.1.1: 
 
-<p align="center"><img src="images\firstImage.png" alt="App" width="500" height="500" align="center" /></p>
+<p align="center"><img src="images\firstImage.png" alt="App" width="450" height="450" align="center" /></p>
 
 ---
 
