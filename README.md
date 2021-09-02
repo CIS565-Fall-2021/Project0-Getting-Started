@@ -13,31 +13,31 @@ Project 0 Getting Started
 
 Part 3.1.1: 
 
-<img src="D:\dev\565\Project0-Getting-Started\images\firstImage.png" alt="App" style="zoom: 50%;" />
+<img src="images\firstImage.png" alt="App" style="zoom: 50%;" />
 
 ---
 
 Part 3.1.2: 
 
-<img src="D:\dev\565\Project0-Getting-Started\images\SecondImage.png" alt="Timeline View" style="zoom:33%;" />
+<img src="images\SecondImage.png" alt="Timeline View" style="zoom:33%;" />
 
 ---
 
 Part 3.1.3: 
 
-<img src="D:\dev\565\Project0-Getting-Started\images\ThirdImage.png" alt="Debugger" style="zoom:33%;" />
+<img src="images\ThirdImage.png" alt="Debugger" style="zoom:33%;" />
 
 ---
 
 WebGL Support: 
 
-<img src="D:\dev\565\Project0-Getting-Started\images\WebGL1.png" style="zoom:43%;" />
+<img src="images\WebGL1.png" style="zoom:43%;" />
 
-<img src="D:\dev\565\Project0-Getting-Started\images\WebGL2.png" style="zoom:43%;" />
+<img src="images\WebGL2.png" style="zoom:43%;" />
 
 ---
 
 DXR Support: 
 
-<img src="D:\dev\565\Project0-Getting-Started\images\DXR.png" style="zoom:43%;" />
+<img src="images\DXR.png" style="zoom:43%;" />
 
