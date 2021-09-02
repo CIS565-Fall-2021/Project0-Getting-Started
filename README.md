@@ -13,7 +13,7 @@ Project 0 Getting Started
 
 Part 3.1.1: 
 
-<img src="images\firstImage.png" alt="App" style="zoom: 50%;" />
+<img src="images\firstImage.png" alt="App" width="500" height="500" />
 
 ---
 
