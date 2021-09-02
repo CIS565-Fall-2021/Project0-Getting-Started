@@ -19,13 +19,13 @@ Part 3.1.1:
 
 Part 3.1.2: 
 
-<img src="images\SecondImage.png" alt="Timeline View" style="zoom:33%;" />
+<img src="images\secondImage.png" alt="Timeline View" style="zoom:33%;" />
 
 ---
 
 Part 3.1.3: 
 
-<img src="images\ThirdImage.png" alt="Debugger" style="zoom:33%;" />
+<img src="images\thirdImage.png" alt="Debugger" style="zoom:33%;" />
 
 ---
 
