@@ -60,6 +60,9 @@ void D3D12RaytracingHelloWorld::EnableDirectXRaytracing(IDXGIAdapter1* adapter)
 
 void D3D12RaytracingHelloWorld::OnInit()
 {
+    // Modify my adapter ID to get NVIDIA GPU.
+    m_adapterIDoverride = 1;
+
     m_deviceResources = std::make_unique<DeviceResources>(
         DXGI_FORMAT_R8G8B8A8_UNORM,
         DXGI_FORMAT_UNKNOWN,
