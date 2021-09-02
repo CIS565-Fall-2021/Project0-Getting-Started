@@ -11,6 +11,7 @@ First edit to have my name appear at the top bar of the window
 ![](images/Screenshot1.png)
 
 WebGL Hardware Accelerated
+
 ![](images/Screenshot2.png)
 
 
