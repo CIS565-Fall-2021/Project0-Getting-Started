@@ -26,5 +26,5 @@ The CETS lab computers do not have the extension installed that allows Nsight pe
 ![](images/webgl_supported.png)
 
 #### DXR Compatibility
-The CETS lab computer doesn't have a DXR compatible GPU (see the below error.
+The CETS lab computer doesn't have a DXR compatible GPU (see the below error).
 ![](images/drx_run_result.png)
