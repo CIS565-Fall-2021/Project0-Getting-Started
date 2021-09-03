@@ -3,12 +3,29 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Stephen Lee
+  * [LinkedIn](https://www.linkedin.com/in/stephen-lee-bb5a40163/)
+* Tested on: Windows 10, i7-9750H @ 2.60GHz, RTX 2060 6GB (Personal computer)
 
-### (TODO: Your README)
+Part 3.1
+====================
+3.1.1
+![](images/3.1.1.PNG)
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+3.1.2
+![](images/3.1.2.p1.PNG)
+![](images/3.1.2.p2.PNG)
+![](images/3.1.2.p3.PNG)
+![](images/3.1.2.p4.PNG)
+![](images/3.1.2.p5.PNG)
+![](images/3.1.2.p6.PNG)
+![](images/3.1.2.p7.PNG)
 
+3.1.3
+![](images/3.1.3.PNG)
+
+3.2
+![](images/3.2.PNG)
+
+3.3
+![](images/3.3.PNG)
