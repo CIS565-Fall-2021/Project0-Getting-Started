@@ -19,6 +19,10 @@ Project 0 Getting Started
 
 ![nsight_profile](images/nsight_profile.png)
 
+### Debugger test
+
+![drx](images/debugger.png)
+
 ### DRX test
 
 ![drx](images/drx.png)
