@@ -10,22 +10,22 @@ Project 0 Getting Started
 Part 3.1
 ====================
 3.1.1
-![](images/3.1.1)
+![](images/3.1.1.PNG)
 
 3.1.2
-![](images/3.1.2.p1)
-![](images/3.1.2.p2)
-![](images/3.1.2.p3)
-![](images/3.1.2.p4)
-![](images/3.1.2.p5)
-![](images/3.1.2.p6)
-![](images/3.1.2.p7)
+![](images/3.1.2.p1.PNG)
+![](images/3.1.2.p2.PNG)
+![](images/3.1.2.p3.PNG)
+![](images/3.1.2.p4.PNG)
+![](images/3.1.2.p5.PNG)
+![](images/3.1.2.p6.PNG)
+![](images/3.1.2.p7.PNG)
 
 3.1.3
-![](images/3.1.3)
+![](images/3.1.3.PNG)
 
 3.2
-![](images/3.2)
+![](images/3.2.PNG)
 
 3.3
-![](images/3.3)
+![](images/3.3.PNG)
