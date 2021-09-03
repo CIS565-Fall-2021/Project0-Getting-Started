@@ -3,12 +3,17 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Yichao Wang
+  * [LinkedIn](https://www.linkedin.com/in/wangyic/) etc.
+* Tested on: Windows 10 Home 64-bit (10.0, Build 18363)
+  * Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz (8 CPUs)
+  * GeForce GTX 1060	6.1
 
-### (TODO: Your README)
 
 Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
 
+![](images/cuda.png)
+![](images/timeline.png)
+![](images/debug.png)
+![](images/webgl.png)
