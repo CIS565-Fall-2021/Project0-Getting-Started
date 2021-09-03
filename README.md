@@ -9,16 +9,16 @@ Project 0 Getting Started
 
 ### CUDA test
 
-![capture](images\capture.png)
+![capture](images/capture.png)
 
 ### WebGL test
 
-![webglcheck](images\webglcheck.png)
+![webglcheck](images/webglcheck.png)
 
 ### NSight Profile
 
-![nsight_profile](images\nsight_profile.png)
+![nsight_profile](images/nsight_profile.png)
 
 ### DRX test
 
-![drx](images\drx.png)
+![drx](images/drx.png)
