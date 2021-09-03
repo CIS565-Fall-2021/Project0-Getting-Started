@@ -13,12 +13,12 @@ Project 0 Getting Started
 Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
 
-![](images/cuda.png)
+![](images/cuda.PNG)
 
-![](images/timeline.png)
+![](images/timeline.PNG)
 
-![](images/debug.png)
+![](images/debug.PNG)
 
-![](images/webgl.png)
+![](images/webgl.PNG)
 
-![](images/dxr.png)
+![](images/dxr.PNG)
