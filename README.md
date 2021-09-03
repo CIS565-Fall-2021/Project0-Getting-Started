@@ -14,6 +14,11 @@ Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
 
 ![](images/cuda.png)
+
 ![](images/timeline.png)
+
 ![](images/debug.png)
+
 ![](images/webgl.png)
+
+![](images/dxr.png)
