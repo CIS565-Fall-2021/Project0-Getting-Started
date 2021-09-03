@@ -9,6 +9,8 @@ Project 0 Getting Started
 
 ### CUDA test
 
+* Compute compatibility: 7.5
+
 ![capture](images/capture.png)
 
 ### WebGL test
