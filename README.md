@@ -13,8 +13,8 @@ Project 0 Getting Started
 Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
 
-[Part 3.1.1: Testing CUDA](images/3.1.1.PNG)
-[Part 3.1.2: Analyze Performace](images/3.1.2.PNG)
-[Part 3.1.3: Nsight Debugging](images/3.1.3.PNG)
-[Part 3.2: WebGL Suupport](images/3.2.PNG)
-[Part 3.3: DXR Support](images/3.3.PNG)
+![Part 3.1.1: Testing CUDA](images/3.1.1.PNG)
+![Part 3.1.2: Analyze Performace](images/3.1.2.PNG)
+![Part 3.1.3: Nsight Debugging](images/3.1.3.PNG)
+![Part 3.2: WebGL Suupport](images/3.2.PNG)
+![Part 3.3: DXR Support](images/3.3.PNG)
