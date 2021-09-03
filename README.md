@@ -9,18 +9,18 @@ Project 0 Getting Started
 
 ### Screenshots
 
-## Part 3.1.1
-![](images/3_1_1.png)
+#### Part 3.1.1
+![](images/3_1_1.PNG)
 
-## Part 3.1.2
-![](images/3_1_2.png)
+#### Part 3.1.2
+![](images/3_1_2.PNG)
 
-## Part 3.1.3
-![](images/3_1_3.png)
+#### Part 3.1.3
+![](images/3_1_3.PNG)
 
-## Part 3.2
-![](images/3_2.png)
+#### Part 3.2
+![](images/3_2.PNG)
 
-## Part 3.3
-![](images/3_3.png)
+#### Part 3.3
+![](images/3_3.PNG)
 
