@@ -3,6 +3,7 @@ Project 0 Getting Started: Instructions
 
 This is due **September 3rd 2021**. (See [late policy](#late-policy) at the bottom)
 
+
 **Summary:** In this project, you will set up your GPU development tools and verify that you can build, run, and do performance analysis.
 
 This project contains:
