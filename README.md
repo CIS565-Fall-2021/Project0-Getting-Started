@@ -6,6 +6,7 @@ Project 0 Getting Started
 * Shubham Sharma
   * [LinkedIn](www.linkedin.com/in/codeshubham), [personal website](https://shubhvr.com/).
 * Tested on: Windows 10, i7-9750H @ 2.26GHz, 16GB, GTX 1660ti 6GB (My Laptop)
+*GPU Compute Capability: 7.5
 
 ### (TODO: Your README)
 
