@@ -17,7 +17,7 @@ Quadro P1000 is CUDA-compatible according to the [list of CUDA-comatible GPUS](h
 ![](images/run_result.png)
 
 #### Performance Profiling
-The CETS lab computers do not have the extension installed that allows Nsight performance profiling. 
+The CETS lab computers do not have the extension installed that allows Nsight performance profiling (and I don't have admin access to install it). Liam said a short explanation would be acceptable for this assingment. 
 
 #### Nsight Debugging
 ![](images/cuda_debugging.png)
@@ -26,5 +26,4 @@ The CETS lab computers do not have the extension installed that allows Nsight pe
 ![](images/webgl_supported.png)
 
 #### DXR Compatibility
-The CETS lab computer doesn't have a DXR compatible GPU (see the below error).
-![](images/drx_run_result.png)
+I cannot build the DXR solution on the CETS computer -- the issue seems to be you have to use debugger mode, but you have to be an admin to switch to debug mode. 
