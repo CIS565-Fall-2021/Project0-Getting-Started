@@ -9,6 +9,17 @@ Project 0 Getting Started
 
 ## Results
 ### Part 3.1: CUDA
-### Part 3.2: WebGL
-### Part 3.3: DXR
+The Cuda Compute Capability of my RTX 2060 is 7.5 as displayed in the following image:
+![Cuda Compute Capability](images/CudaComputeCapability.jpg)
 
+Nsight Trace:
+![Nsight Trace](images/Nsight_Trace.jpg)
+
+Nsight Debugging:
+![Nsight Debugging](images/NsightDebugging.jpg)
+### Part 3.2: WebGL
+WebGL 2.0 Compatability:
+![WebGL 2.0 Compatability](images/WebGL_2.0_Compatability.jpg)
+
+### Part 3.3: DXR
+![DXR](images/DXR.jpg)
