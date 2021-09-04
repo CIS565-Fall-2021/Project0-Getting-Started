@@ -3,12 +3,24 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Lindsay Smith
+  * [LinkedIn](https://www.linkedin.com/in/lindsay-j-smith/), [personal website](https://lindsays-portfolio-d6aa5d.webflow.io/)
+* Tested on: Windows 10, i7-11800H 144Hz 16GB RAM, GeForce RTX 3060 512GB SSD (Personal Laptop)
 
-### (TODO: Your README)
+CUDA Running (3.1.1)
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+![](images/Screenshot1.png)
+
+Analysis (3.1.2)
+
+![](images/Screenshot3.png)
+
+WebGL (3.2)
+
+![](images/Screenshot2.png)
+
+My visual studio was unable to load the nuget packages and I could not install the required package for part 3.3
+
+
+
 
