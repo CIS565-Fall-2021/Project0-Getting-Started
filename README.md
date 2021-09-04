@@ -16,7 +16,7 @@ Cuda Project Modification
 
 Nsight Analyze
 ----------------------
-I am using a CETS computer and I am currently not able to analyze without adminstrative access.
+I am using a CETS computer and I am currently not able to analyze without adminstrative access. 
 
 Nsight Debugging
 -------------------
@@ -28,8 +28,5 @@ WebGL Support
 
 RTX Support
 -----------
-I am currently using a CETS computer which does not have any level of RTX Support. When trying to run the project I get this error:
-![](images/dxrCETS.PNG)
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+I am currently using a CETS computer which does not have any level of RTX Support without adminstrative access allowing for developer mode to be enabled. 
 
