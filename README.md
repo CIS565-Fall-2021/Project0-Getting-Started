@@ -7,8 +7,8 @@ Project 0 Getting Started
   * https://www.linkedin.com/in/mike-rabbitz/
 * Tested on: Windows 10, i7-9750H @ 2.60GHz 32 GB, RTX 2060 6GB (Personal)
 
-### (TODO: Your README)
-
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+## Results
+### Part 3.1: CUDA
+### Part 3.2: WebGL
+### Part 3.3: DXR
 
