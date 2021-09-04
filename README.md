@@ -9,7 +9,7 @@ Project 0 Getting Started
 
 ## Results
 ### Part 3.1: CUDA
-#### The Cuda Compute Capability of my RTX 2060 is 7.5 as displayed in the following image:
+#### The Cuda Compute Capability of the RTX 2060 is 7.5 as displayed in the following image:
 ![Cuda Compute Capability](images/CudaComputeCapability.JPG)
 
 #### Nsight Trace:
