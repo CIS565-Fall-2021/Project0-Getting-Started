@@ -11,9 +11,15 @@ CUDA Running (3.1.1)
 
 ![](images/Screenshot1.png)
 
+Analysis (3.1.2)
+
+![](images/Screenshot3.png)
+
 WebGL (3.2)
 
 ![](images/Screenshot2.png)
+
+My visual studio was unable to load the nuget packages and I could not install the required package for part 3.3
 
 
 
