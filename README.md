@@ -4,7 +4,7 @@ Project 0 Getting Started
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
 * Richard Chen
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
+  * [LinkedIn](https://www.linkedin.com/in/richardrlchen/)
 * Tested on: Windows 11, i7-10875H @ 2.30GHz 16GB, RTX 2060 MAX-Q 6GB (Personal)
 
 ---
