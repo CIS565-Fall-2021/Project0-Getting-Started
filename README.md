@@ -3,12 +3,30 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Emma Holthouser
+  * linkedin.com/in/emma-holthouser/
+* Tested on: (TODO) Windows 10, i7-6700 CPU @ 3.40GHz 16GB, Nvidia Quadro P1000 12156 MB(Towne Lab TMB62-12)
 
-### (TODO: Your README)
+README
+-----------
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+Cuda Project Modification
+------------------------------
+![](images/twoColors.PNG)
+
+Nsight Analyze
+----------------------
+I am using a CETS computer and I am currently not able to analyze without adminstrative access. 
+
+Nsight Debugging
+-------------------
+![](images/warpInfo.PNG)
+
+WebGL Support
+-----------------------------
+![](images/webGLSupport.PNG)
+
+RTX Support
+-----------
+I am currently using a CETS computer which does not have any level of RTX Support without adminstrative access allowing for developer mode to be enabled. 
 
