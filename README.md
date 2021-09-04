@@ -12,3 +12,8 @@ Project 0 Getting Started
 Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
 
+Name: Nathan Devlin
+Computer: Personal, MSI GE75 Raider, see above for tech specs
+
+![](images/example.png)
+
