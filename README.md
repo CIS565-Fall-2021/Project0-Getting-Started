@@ -7,14 +7,6 @@ Project 0 Getting Started
   * [LinkedIn](https://www.linkedin.com/in/nathandevlin), [personal website](https://www.ndevlin.com), [twitter](NA), etc.
 * Tested on: (TODO) Windows 10, Intel i7-1075H @ 2.60GHz 32GB RAM, RTX 2070 Super mobile 8 GB GDDR6 memory https://www.linkedin.com/in/nathandevlin Nvidia Driver 471.68
 
-### (TODO: Your README)
-
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
-
-Name: Nathan Devlin
-Computer: Personal, MSI GE75 Raider, see above for tech specs
-
 ![](images/NathanDevlinScreenshot.png)
 ![](images/NSightTimelineScreenShot.png)
 ![](images/AutosAndWarpInfoScreenshot.png)
