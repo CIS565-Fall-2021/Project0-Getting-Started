@@ -5,26 +5,26 @@ Project 0 Getting Started
 
 * Matt Elser
   * [LinkedIn](https://www.linkedin.com/in/matt-elser-97b8151ba/)
-* Tested on: Windows 10, i7-6700 @ 3.4GHz 16GB, Quadro P1000 4GB (Moore 100 Lab)
+* Tested on: Ubuntu 20.04, i3-10100F @ 3.6GHz 16GB, GeForce 1660 Super 6GB
 
-## Results
-After the virtual lab instances failed to yield a machine with the required GPU and tools, 
-a Moore lab machine was used to run the relevant code. While it was feasible to run most of 
-the required steps, logistical hurdles and the noted incompatibilities suggest purchasing 
-personal hardware is a better solution for future projects. 
+## Results v2
+This was previously completed on a Moore lab machine (see README in 
+[v1](https://github.com/mattelser/Project0-Getting-Started/tree/e4d7c4977a13c450ca0db52ff8e1ea44a6f5f6d7)),
+however it seemed prudent to re-do it with a personal machine. Other than being easier to access 
+logistically, having admin privileges has enabled performance analysis. 
 
 ### ✅ run main.cpp
 This output indicates the major/minor compute capability of the device, converting this data 
-to colors and displaying them on the screen. Green indicates 4|5, red indicates 1. The image 
+to colors and displaying them on the screen. Cyan indicates 7, Green indicates 4|5. The image 
 is calculated using a kernel, so the display of it indicates a successful utilization of the device. 
 
 ![main.cpp output](images/step_3_1_1_screenshot.png)
-### ❌ unsuccessful performance Analysis
+### ✅ performance Analysis
 There is a known issue on the CETS machines preventing performance analysis from running. 
 The fix requires privileges beyond those provided in order to install additional developer 
 tools.
 
-![sad mac from wikimedia commons](images/Sad_mac.jpeg)
+![sad mac from wikimedia commons](images/step3_1_2_visual_profiler.png)
 ### ✅ Nsight debugging
 Here the debugger is halted based on a given conditional (`index` is a specified value)
 
@@ -35,7 +35,6 @@ chrome confirms webGL is supported.
 ![webGL verification](images/webGL_verification.png)
 
 ### ❌ DirectX RayTracing
-DXR fails. As noted in the output, this may be due to driver or hardware incompatibilities, 
-neither of which is fixable on Moore lab machines 
+Linux lacks support for DirectX.  
 
-![DXR incompatibility](images/DXR_incompatibility.png)
+
