@@ -87,19 +87,38 @@ In your README, report the Compute Capability of your CUDA-compatible GPU (somet
 
 #### Linux
 
-It is recommended that you use Nsight. Nsight is shipped with CUDA. If you set up the environment path correctly `export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}` (Note that simply typing the `export` command is a temporary change. The `PATH` variable won't be updated permanently. For permanent change, add it to your shell configuration file, e.g. `~/.profile` on Ubuntu), you can run Nsight by typing `nsight` in your terminal.
+1. CD into `Project0-Getting-Started` within your cloned repository. Create a directory called `eclipse`. 
+`eclipse` should be a sibling directory to `cuda-getting-started`. (The name `eclipse` itself is not important, but that's the example here)
+2. CD into the `eclipse` directory, then run the command
+    ```
+    cmake ../cuda-getting-started -G "Eclipse CDT4 - Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
+    ```
+    * Note: Change `Debug` to `Release` when running the profiler.
 
-1. Open Nsight. Set the workspace to the one *containing* your cloned repo.
-2. *File->Import...->General->Existing Projects Into Workspace*.
-   * Select the `cuda-getting-started` directory as the *root directory*.
-3. Select the *cis565-* project in the Project Explorer. Right click the project. Select *Build Project*.
+Now you can carry on running the executable and other profiler and debug steps.
+
+It is recommended that you use Nsight Eclipse Plugins (standalone Nsight Eclipse Edition in older versions
+of CUDA Toolkit). Nsight Eclipse Plugins can be added to standard Eclipse installations following
+[the directions here](https://docs.nvidia.com/cuda/nsight-eclipse-plugins-guide/index.html). In older CUDA 
+Toolkit versions Nsight Eclipse Edition (`nsight`) is shipped as part of the toolkit. If you set up the 
+environment path correctly `export PATH=/usr/local/cuda-<MyCUDAVersion>/bin${PATH:+:${PATH}}` (Note that simply 
+typing the `export` command is a temporary change. The `PATH` variable won't be updated permanently. For permanent 
+change, add it to your shell configuration file, e.g. `~/.profile` on Ubuntu).
+
+3. Open Eclipse (make sure you have installed Nsight plugins!)
+4. Select File -> Import.
+5. Then in the pop up box, select `General -> Existing Project into Workspace".
+6. In `Select Root Directory` browse to the `eclipse` directory.
+7. This will populate the box below with `cis565_getting_started.....`.
+8. Select this and click "Finish".
+9. Select the *cis565-* project in the Project Explorer. Right click the project. Select *Build Project*.
    * For later use, note that you can select various Debug and Release build configurations under *Project->Build Configurations->Set Active...*.
-4. If you see an error like `CUDA_SDK_ROOT_DIR-NOTFOUND`:
-   * In a terminal, navigate to the build directory, then run: `cmake-gui ..`
-   * Set `CUDA_SDK_ROOT_DIR` to your CUDA install path.  This will be something like: `/usr/local/cuda`
-   * Click *Configure*, then *Generate*.
-5. Right click and *Refresh* the project.
-6. From the *Run* menu, *Run*. Select "Local C/C++ Application" and the `cis565_` binary.
+10. If you see an error like `CUDA_SDK_ROOT_DIR-NOTFOUND`:
+11. In a terminal, navigate to the build directory, then run: `cmake-gui ..`
+12. Set `CUDA_SDK_ROOT_DIR` to your CUDA install path.  This will be something like: `/usr/local/cuda`
+13. Click *Configure*, then *Generate*.
+14. Right click and *Refresh* the project.
+15. From the *Run* menu, *Run*. Select "Local C/C++ Application" and the `cis565_` binary.
 
 ### Part 3.1.1: Modify the CUDA Project and Take a Screenshot
 
@@ -161,21 +180,29 @@ It is recommended that you use Nsight. Nsight is shipped with CUDA. If you set u
 14. Play around with Nsight debugger as much as you want.
 
 #### Linux
+1. Switch your build configuration to "Debug" and `Rebuild` the solution.
+2. Begin a Debug session by going to `Run` -> `Debug`. You may see a prompt about changing the layout for debugging,
+agree to it. 
+3. The program will start but immediately halt at the first line of main.cpp.
+4. Now place a breakpoint (double click to the left of the line number) at Line 79 of `kernel.cu` => `if (x <= width && y <= height) {`
+5. Resume the CUDA Debugging (`Run`->`Resume`) . It should proceed until the breakpoint is hit.
+    * The *Variables* debugging tabs at the bottom should show the values in the local scope.
+6. The following steps should be done with Nsight CUDA Debugging running.
+7. Visual Studio on Windows has a *Next Active Warp* feature for debugging, but the easiest approximation in
+eclipse is simply to resume debugging and hit the same break point once more. Now notice the values that have changed.
+8. Now, let's try to go to a particular index (pick your own number - anything greater than the current index).
+    * remove the current breakpoint
+    * add a conditional breakpoint in the same place by right clicking left of the line number and 
+selecting add breakpoint
+    * In the `Condition` box, put `index == <your number>`.
+    * Click `Apply and Close`.
+9. Now resume the debugging again.
+10. The breakpoint should be hit one more time. This time, the variables window will should `index` as your number.
+11. Goto the CUDA tab next to the Variables tab. Expand a block, click on a warp within it, this pulls up the relevant
+thread on the debugger tab on the left. 
+13. Take a screenshot of IDE showing both the variables tab and the debugger tab save it under `images`.
+14. Play around with debugger as much as you want. For example, check out the Expressions tab.
 
-1. Create a directory called `eclipse` under `Project0-Getting-Started`. `eclipse` should be a sibling directory to `cuda-getting-started`. (The name `eclipse` itself is not important, but that's the example here)
-2. CD into the `eclipse` directory, then run the command
-    ```
-    cmake ../cuda-getting-started -G "Eclipse CDT4 - Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
-    ```
-    * Note: Change `Debug` to `Release` when running the profiler.
-3. Open Nsight Eclipse Edition
-4. Select File -> Import.
-5. Then in the pop up box, select `General -> Existing Project into Workspace".
-6. In `Select Root Directory` browse to the `eclipse` directory.
-7. This will populate the box below with `cis565_getting_started.....`.
-8. Select this and click "Finish".
-
-Now you can carry on running the executable and other profiler and debug steps.
 
 ### Part 3.2: WebGL
 
