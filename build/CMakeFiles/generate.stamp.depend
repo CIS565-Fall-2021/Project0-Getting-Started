@@ -1,0 +1,35 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindCUDA.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindCUDA/run_nvcc.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindCUDA/select_compute_arch.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/3.21.2/CMakeCCompiler.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/3.21.2/CMakeCXXCompiler.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/3.21.2/CMakeRCCompiler.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/3.21.2/CMakeSystem.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/cis565_getting_started_generated_kernel.cu.obj.cmake.pre-gen
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/cis565_getting_started_generated_kernel.cu.obj.depend
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started/CMakeLists.txt
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started/cmake/CUDAComputesList.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started/cmake/FindGLEW.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started/cmake/FindGLFW.cmake
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started/cmake/cuda_compute_capability.cpp

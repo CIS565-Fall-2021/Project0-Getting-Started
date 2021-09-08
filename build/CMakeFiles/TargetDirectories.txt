@@ -1,0 +1,3 @@
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/ALL_BUILD.dir
+D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/ZERO_CHECK.dir

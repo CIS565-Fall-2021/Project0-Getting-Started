@@ -5,11 +5,15 @@ Project 0 Getting Started
 
 * Yuxuan Zhu
   * [LinkedIn](https://www.linkedin.com/in/andrewyxzhu/), [personal website]()
-* Tested on: Windows 10, i7-7700HQ @ 2.80GHz 16GB, GTX 1050 222MB 
+* Tested on: Windows 10, i7-7700HQ @ 2.80GHz 16GB, GTX 1050 4096MB (Personal Laptop)
 
-### (TODO: Your README)
+The compute capability of my GeForece GTX 1050 GPU is 6.1.
 
-The compute capability of my GeForece GTX 1050 GPU is 6.1
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+I was able to render with my GPU successfully. ![cuda-test](images/cuda.JPG)
+
+I was able to run the Nsight debugger. ![Nsight](images/Nsight.JPG)
+
+My laptop supports WebGL. ![WebGL](WebGL.JPG)
+
+My GPU does not have hardware support for RayTracing and is using software fallback layer. ![DXR-test](images/Raytracing.JPG)
 
