@@ -1,0 +1,26 @@
+^D:\ANDREW\PENN\CLASSES\JUNIORFALL\CIS565\PROJECT0-GETTING-STARTED\CUDA-GETTING-STARTED\SRC\KERNEL.CU
+setlocal
+cd D:\Andrew\Penn\Classes\JuniorFall\CIS565\Project0-Getting-Started\build\CMakeFiles\cis565_getting_started.dir\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=ON -D "CCBIN:PATH=D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.29.30133/bin/Hostx64/x64" -D build_configuration:STRING=Debug -D generated_file:STRING=D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/Debug/cis565_getting_started_generated_kernel.cu.obj -D generated_cubin_file:STRING=D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/Debug/cis565_getting_started_generated_kernel.cu.obj.cubin.txt -P D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/cis565_getting_started.dir/src/cis565_getting_started_generated_kernel.cu.obj.Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\ANDREW\PENN\CLASSES\JUNIORFALL\CIS565\PROJECT0-GETTING-STARTED\CUDA-GETTING-STARTED\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/cuda-getting-started -BD:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build --check-stamp-file D:/Andrew/Penn/Classes/JuniorFall/CIS565/Project0-Getting-Started/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

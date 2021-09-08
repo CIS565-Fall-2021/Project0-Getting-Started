@@ -178,9 +178,7 @@ PrebuildCheck.bat</Command>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
