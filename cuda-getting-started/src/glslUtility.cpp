@@ -16,10 +16,9 @@
 
 using std::ios;
 
-namespace glslUtility {
-
 // embedded passthrough shaders so that default passthrough shaders don't need to be loaded
-static std::string passthroughVS =
+
+static char passthroughVS[] =
     "attribute vec4 Position;"
     "attribute vec2 Texcoords;"
     "varying vec2 v_Texcoords;"
@@ -28,7 +27,9 @@ static std::string passthroughVS =
     "    v_Texcoords = Texcoords;"
     "    gl_Position = Position;"
     "}";
-static std::string passthroughFS =
+static size_t passthroughVS_len = sizeof(passthroughVS) / sizeof(*passthroughVS);
+
+static char passthroughFS[] =
     "varying vec2 v_Texcoords;"
     ""
     "uniform sampler2D u_image;"
@@ -37,26 +38,41 @@ static std::string passthroughFS =
     "    gl_FragColor = texture2D(u_image, v_Texcoords);"
     "}";
 
+static size_t passthroughFS_len = sizeof(passthroughFS) / sizeof(*passthroughFS);
+
+
+namespace glslUtility {
+
 typedef struct {
     GLuint vertex;
     GLuint fragment;
 } shaders_t;
 
-char* loadFile(const char *fname, GLint &fSize) {
-    // file read based on example in cplusplus.com tutorial
-    std::ifstream file (fname, ios::in | ios::binary | ios::ate);
-    if (file.is_open()) {
-        unsigned int size = (unsigned int)file.tellg();
-        fSize = size;
-        char *memblock = new char [size];
-        file.seekg (0, ios::beg);
-        file.read (memblock, size);
-        file.close();
-        //std::cout << "file " << fname << " loaded" << std::endl;
-        return memblock;
-    }
+char *loadFile(const char *fname, GLint *f_size)
+{
+    FILE *f;
+    GLint len;
+    char *fcontents;
+    
+    if (!(f = fopen(fname, "rb")))
+       goto LOADFILE_ERR;
 
-    std::cout << "Unable to open file " << fname << std::endl;
+    if (fseek(f, 0, SEEK_END) < 0 || (len = ftell(f)) < 0)
+        goto LOADFILE_ERR;
+
+    rewind(f);
+
+    if (!(fcontents = (char*)malloc(len + 1)))
+        goto LOADFILE_ERR;
+    if (fread(fcontents, sizeof(*fcontents), len, f) < len)
+        goto LOADFILE_ERR;
+
+    fclose(f);
+    *f_size = len;
+    return fcontents;
+
+LOADFILE_ERR:
+    fprintf(stderr, "failed to load file %s\n", fname);
     exit(EXIT_FAILURE);
 }
 
@@ -107,14 +123,14 @@ shaders_t loadDefaultShaders() {
     GLint vlen;
     GLint flen;
 
-    vlen = (unsigned int)std::strlen(passthroughVS.c_str());
-    flen = (unsigned int)std::strlen(passthroughFS.c_str());
+    vlen = (unsigned int)std::strlen(passthroughVS);
+    flen = (unsigned int)std::strlen(passthroughFS);
 
-    vs = new char[passthroughVS.length() + 1];
-    fs = new char[passthroughFS.length() + 1];
+    vs = new char[passthroughVS_len];
+    fs = new char[passthroughFS_len];
 
-    std::strcpy(vs, passthroughVS.c_str());
-    std::strcpy(fs, passthroughFS.c_str());
+    std::strcpy(vs, passthroughVS);
+    std::strcpy(fs, passthroughFS);
 
     const char * vv = vs;
     const char * ff = fs;
@@ -160,8 +176,8 @@ shaders_t loadShaders(const char * vert_path, const char * frag_path) {
     GLint vlen;
     GLint flen;
 
-    vs = loadFile(vert_path, vlen);
-    fs = loadFile(frag_path, flen);
+    vs = loadFile(vert_path, &vlen);
+    fs = loadFile(frag_path, &flen);
 
     const char * vv = vs;
     const char * ff = fs;

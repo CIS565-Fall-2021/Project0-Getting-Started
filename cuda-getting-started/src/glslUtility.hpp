@@ -6,7 +6,8 @@
  * @copyright University of Pennsylvania
  */
 
-#pragma once
+#ifndef GLSLUTILITY_H
+#define GLSLUTILITY_H
 
 #include <GL/glew.h>
 
@@ -16,3 +17,5 @@ namespace glslUtility {
             *fragmentShaderPath, const char *attributeLocations[], GLuint
             numberOfLocations);
 }
+
+#endif /* GLSLUTILITY_H*/
