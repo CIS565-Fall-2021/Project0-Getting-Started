@@ -1,82 +1,57 @@
-#include <cstdio>
-#include <sstream>
+/* cuda-getting-started */
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <cuda_runtime_api.h>
 #include <cuda_gl_interop.h>
-#include "main.hpp"
 
-/**
- * C main function.
- */
-int main(int argc, char* argv[]) {
-    // TODO: Change this line to use your name!
-    m_yourName = "TODO: YOUR NAME HERE";
+//#include "main.h"
+#include "kernel.h"
+#include "glslUtility.hpp"
 
-    if (init(argc, argv)) {
-        mainLoop();
-    }
 
-    return 0;
-}
+/* GL settings */
 
-/**
- * Initialization of CUDA and GLFW.
- */
-bool init(int argc, char **argv) {
-    // Set window title to "Student Name: [SM 2.0] GPU Name"
-    std::string deviceName;
-    cudaDeviceProp deviceProp;
-    int gpuDevice = 0;
-    int device_count = 0;
-    cudaGetDeviceCount(&device_count);
-    if (gpuDevice > device_count) {
-        std::cout << "Error: GPU device number is greater than the number of devices!" <<
-                  "Perhaps a CUDA-capable GPU is not installed?" << std::endl;
-        return false;
-    }
-    cudaGetDeviceProperties(&deviceProp, gpuDevice);
-    m_major = deviceProp.major;
-    m_minor = deviceProp.minor;
+GLuint             m_pbo = (GLuint)NULL;
+GLFWwindow        *m_window;
+char              *m_yourName = "kaan";
+unsigned int       m_width = 800;
+unsigned int       m_height = 800;
+int                m_major;
+int                m_minor;
+GLuint             m_positionLocation = 0;
+GLuint             m_texCoordsLocation = 1;
+GLuint             m_image;
 
-    std::ostringstream ss;
-    ss << m_yourName << ": [SM " << m_major << "." << m_minor << "] " << deviceProp.name;
-    deviceName = ss.str();
 
-    // Window setup stuff
-    glfwSetErrorCallback(errorCallback);
+void errorCallback(int error, const char* description);
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void runCUDA();
 
-    if (!glfwInit()) {
-        return false;
-    }
-    m_width = 800;
-    m_height = 800;
-    m_window = glfwCreateWindow(m_width, m_height, deviceName.c_str(), NULL, NULL);
-    if (!m_window) {
-        glfwTerminate();
-        return false;
-    }
-    glfwMakeContextCurrent(m_window);
-    glfwSetKeyCallback(m_window, keyCallback);
+// ====================================
+// Setup/init stuff
+// ====================================
+int init(int argc, char** argv);
+void initPBO(GLuint* pbo);
+void initCUDA();
+void initTextures();
+void initVAO();
+GLuint initShader();
 
-    glewExperimental = GL_TRUE;
-    if (glewInit() != GLEW_OK) {
-        return false;
-    }
+// ====================================
+// Clean-up stuff
+// ====================================
+void cleanupCUDA();
+void deletePBO(GLuint* pbo);
+void deleteTexture(GLuint* tex);
 
-    // init all of the things
-    initVAO();
-    initTextures();
-    initCUDA();
-    initPBO(&m_pbo);
 
-    GLuint passthroughProgram;
-    passthroughProgram = initShader();
-    glUseProgram(passthroughProgram);
-    glActiveTexture(GL_TEXTURE0);
 
-    return true;
-}
+/* Initialization of CUDA and GLFW. */
 
 void initPBO(GLuint *pbo) {
     if (pbo) {
@@ -148,7 +123,7 @@ void initTextures() {
 }
 
 GLuint initShader() {
-    const char *attributeLocations[] = { "Position", "Tex" };
+    const static char *attributeLocations[] = { "Position", "Tex" };
     GLuint program = glslUtility::createDefaultProgram(attributeLocations, 2);
     GLint location;
     glUseProgram(program);
@@ -158,9 +133,66 @@ GLuint initShader() {
     return program;
 }
 
-// ====================================
-// Main loop stuff
-// ====================================
+int init(int argc, char** argv) {
+        /* Set window title to "Student Name: [SM 2.0] GPU Name" */
+
+        char *deviceName;
+        cudaDeviceProp deviceProp;
+        int gpuDevice = 0;
+        int device_count = 0;
+
+        cudaGetDeviceCount(&device_count);
+        if (gpuDevice > device_count) {
+                fprintf(stderr,
+                        "Error: GPU device number is greater than the number of devices!"
+                        "Perhaps a CUDA-capable GPU is not installed?\n");
+                return 1;
+        }
+        cudaGetDeviceProperties(&deviceProp, gpuDevice);
+        m_major = deviceProp.major;
+        m_minor = deviceProp.minor;
+
+        if (!(deviceName = (char*)malloc(sizeof(*deviceName) * (strlen(m_yourName) + strlen(deviceProp.name) + 50)))) {
+                fprintf(stderr, "failed to malloc\n");
+                exit(EXIT_FAILURE);
+        }
+        sprintf(deviceName, "%s: [SM %d.%d] %s", m_yourName, m_major, m_minor, deviceProp.name);
+
+
+        /* Window setup */
+        glfwSetErrorCallback(errorCallback);
+
+        if (!glfwInit())
+                return false;
+ 
+        m_window = glfwCreateWindow(m_width, m_height, deviceName, NULL, NULL);
+        if (!m_window) {
+                glfwTerminate();
+                return false;
+        }
+        glfwMakeContextCurrent(m_window);
+        glfwSetKeyCallback(m_window, keyCallback);
+
+        glewExperimental = GL_TRUE;
+        if (glewInit() != GLEW_OK)
+                return false;
+
+
+        initVAO();
+        initTextures();
+        initCUDA();
+        initPBO(&m_pbo);
+
+        GLuint passthroughProgram;
+        passthroughProgram = initShader();
+        glUseProgram(passthroughProgram);
+        glActiveTexture(GL_TEXTURE0);
+
+        return true;
+}
+
+
+/* Main loop */
 
 void runCUDA() {
     // Map OpenGL buffer object for writing from CUDA on a single GPU
@@ -175,7 +207,8 @@ void runCUDA() {
     cudaGLUnmapBufferObject(m_pbo);
 }
 
-void mainLoop() {
+void mainLoop()
+{
     while (!glfwWindowShouldClose(m_window)) {
         glfwPollEvents();
         runCUDA();
@@ -195,21 +228,23 @@ void mainLoop() {
 }
 
 
-void errorCallback(int error, const char *description) {
+void errorCallback(int error, const char *description)
+{
     fprintf(stderr, "error %d: %s\n", error, description);
 }
 
-void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+{
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
 }
 
-// ====================================
-// Clean-up stuff
-// ====================================
 
-void cleanupCUDA() {
+/* Clean-up */
+
+void cleanupCUDA()
+{
     if (m_pbo) {
         deletePBO(&m_pbo);
     }
@@ -218,7 +253,8 @@ void cleanupCUDA() {
     }
 }
 
-void deletePBO(GLuint *pbo) {
+void deletePBO(GLuint *pbo)
+{
     if (pbo) {
         // unregister this buffer object with CUDA
         cudaGLUnregisterBufferObject(*pbo);
@@ -226,11 +262,23 @@ void deletePBO(GLuint *pbo) {
         glBindBuffer(GL_ARRAY_BUFFER, *pbo);
         glDeleteBuffers(1, pbo);
 
-        *pbo = (GLuint)NULL;
+        *pbo = (GLuint) NULL;
     }
 }
 
-void deleteTexture(GLuint *tex) {
+void deleteTexture(GLuint *tex)
+{
     glDeleteTextures(1, tex);
-    *tex = (GLuint)NULL;
+    *tex = (GLuint) NULL;
+}
+
+
+
+
+
+
+int main(int argc, char** argv) {
+        if (init(argc, argv))
+                mainLoop();
+        return 0;
 }

@@ -3,12 +3,15 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Kaan Erdogmus
+  * [LinkedIn](https://www.linkedin.com/in/kaanberk), [personal website](https://kaan9.github.io),
+* Tested on: Windows 10, i7-8850H @ 4.3GHz 24GB, nvidia Quadro P1000
 
-### (TODO: Your README)
+### Features
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+Completed and tested features up to Part 3.3 DXR. nvidia Quadro P1000 does
+not support DirectX ray tracing and only worked with the fallback layer FL.
 
+The compute capability of the Quadro P1000 is 6.1.
+
+Also rewrote significant portions of main.cpp from C++ to ISO C.
